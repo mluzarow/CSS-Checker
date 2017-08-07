@@ -30,9 +30,8 @@ def validatePropertyKeyword (key):
     return (True)
 
 def validatePropertyArgument (key, arg):
-    if (match (CSSFileReference.PROPERTIES ["%s_re" % key], arg) == None):
-        if (not (arg in CSSFileReference.PROPERTIES [key])):
-            print ("The argument [%s] is not valid for the property [%s]" % (arg, key))
-            return (False)
+    if (match (CSSFileReference.PROPERTIES [key], arg) == None):
+        print ("The argument [%s] is not valid for the property [%s]" % (arg, key))
+        return (False)
     return (True)
         
